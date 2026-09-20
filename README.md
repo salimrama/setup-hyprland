@@ -18,8 +18,8 @@ Script ini akan secara otomatis melakukan langkah-langkah berikut:
 
 1. Buka terminal dan *clone* repositori ini:
 ```bash
-git clone https://github.com/salimrama/setup-hyprland-dengan-illogical-impluse-dan-end-4-pc.git
-cd setup-hyprland-dengan-illogical-impluse-dan-end-4-pc
+git clone [https://github.com/salimrama/setup-hyprland.git](https://github.com/salimrama/setup-hyprland.git)
+cd setup-hyprland
 ```
 
 2. Berikan izin eksekusi pada script:
