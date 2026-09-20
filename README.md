@@ -1,53 +1,53 @@
 # Arch Linux Hyprland Auto-Setup
 
-Script Bash untuk mengotomatisasi instalasi dan konfigurasi lingkungan desktop **Hyprland** di Arch Linux atau CachyOS. Script ini dirancang agar kamu bisa dengan cepat mengatur sistem dengan tampilan yang estetik dan fungsional dalam satu kali eksekusi.
+Bash script untuk *auto-install* dan *setup desktop environment* **Hyprland** di Arch Linux atau CachyOS. Script ini dibikin biar kalian bisa nge-*deploy* sistem dengan *look* yang estetik dan fungsional cuma dengan sekali *run*.
 
-## 📦 Apa saja yang diinstal?
+## 📦 What's Inside?
 
-Script ini akan secara otomatis melakukan langkah-langkah berikut:
-1. Memperbarui sistem secara penuh (`pacman -Syu`).
-2. Menginstal **Hyprland** dan dependensi dasarnya.
-3. Menginstal dan mengaktifkan **SDDM** sebagai *Display Manager*.
-4. Menginstal dan menerapkan tema SDDM **[qylock](https://github.com/Darkkal44/qylock)**.
-5. Menginstal ekosistem dotfiles **[Illogical Impulse (dots-hyprland)](https://github.com/end-4/dots-hyprland)**.
-6. Menginstal konfigurasi Quickshell **[end4-pC](https://github.com/pctrade/end4-pC)** dan otomatis memperbarui file konfigurasi `variables.lua`.
+Script ini bakal otomatis ngeksekusi *workflow* berikut:
+1. *Full system update* (`pacman -Syu`).
+2. Install **Hyprland** beserta *core dependencies*-nya.
+3. Install dan *enable service* **SDDM** sebagai *Display Manager*.
+4. *Clone* dan *apply* SDDM theme **[qylock](https://github.com/Darkkal44/qylock)**.
+5. Install *dotfiles ecosystem* **[Illogical Impulse (dots-hyprland)](https://github.com/end-4/dots-hyprland)**.
+6. *Clone* config Quickshell **[end4-pC](https://github.com/pctrade/end4-pC)** dan otomatis nge-*update/inject* parameter di file config `variables.lua`.
 
-## 🚀 Cara Penggunaan
+## 🚀 How to Usage
 
-**Peringatan:** Pastikan kamu menjalankan script ini di Arch Linux atau turunannya yang baru diinstal, atau pada sistem yang belum memiliki konfigurasi Hyprland/SDDM kustom yang tumpang tindih.
+**Warning:** Pastikan kalian nge-*run* script ini di *fresh install* Arch Linux (atau turunannya), biar nggak *conflict* sama custom config Hyprland/SDDM yang udah ada di lokal kalian.
 
-1. Buka terminal dan *clone* repositori ini:
+1. Buka terminal lalu *clone* repo ini:
 ```bash
 git clone [https://github.com/salimrama/setup-hyprland.git](https://github.com/salimrama/setup-hyprland.git)
 cd setup-hyprland
 ```
 
-2. Berikan izin eksekusi pada script:
+2. *Set permission* biar script-nya *executable*:
 ```bash
 chmod +x setup-hyprland.sh
 ```
 
-3. Jalankan script (script akan otomatis meminta akses sudo jika diperlukan):
+3. *Execute* script-nya (script bakal nge-handle *sudo prompt* otomatis pas butuh *root access*):
 ```bash
 ./setup-hyprland.sh
 ```
 
-4. Setelah instalasi selesai, *reboot* (mulai ulang) sistem kamu:
+4. Kalau proses instalasi udah *done*, tinggal *reboot* sistem:
 ```bash
 reboot
 ```
 
-## 📝 Catatan Penting
+## 📝 Notes
 
-- Proses instalasi (khususnya *setup* dari Illogical Impulse) mungkin akan memakan waktu tergantung pada kecepatan internet, karena script akan mengunduh banyak paket tambahan dari AUR.
-- Jangan menjalankan script ini langsung menggunakan perintah `sudo ./setup-hyprland.sh`. Jalankan sebagai *user* biasa, sistem akan memintamu memasukkan *password root* saat mengeksekusi instalasi paket.
+- Proses *build* dan instalasi (terutama waktu jalanin *setup script* Illogical Impulse) mungkin agak lama tergantung koneksi internet kalian, soalnya script bakal nge-*fetch* dan *compile* banyak *package* tambahan dari AUR.
+- **JANGAN** nge-*run* script ini pakai *user root* atau langsung `sudo ./setup-hyprland.sh`. Cukup *run* sebagai *standard user*, script-nya udah di-handle biar nge-*prompt* password root pas eksekusi *package manager*.
 
-## ✨ Kredit & Apresiasi
+## ✨ Credits & Shoutouts
 
-Script ini menggunakan karya luar biasa dari komunitas *open-source*. Terima kasih kepada para pembuatnya:
-* **[Darkkal44](https://github.com/Darkkal44/qylock)** untuk tema SDDM `qylock`.
-* **[end-4](https://github.com/end-4/dots-hyprland)** untuk dotfiles Hyprland *Illogical Impulse* yang sangat cantik.
-* **[pctrade](https://github.com/pctrade/end4-pC)** untuk konfigurasi Quickshell tambahan.
+Script ini di-*build* menggunakan *resource open-source* yang luar biasa. *Huge thanks to*:
+* **[Darkkal44](https://github.com/Darkkal44/qylock)** untuk SDDM theme `qylock`.
+* **[end-4](https://github.com/end-4/dots-hyprland)** untuk *god-tier dotfiles* Hyprland *Illogical Impulse*.
+* **[pctrade](https://github.com/pctrade/end4-pC)** untuk *custom config* Quickshell.
 
 ---
-**Dikelola oleh:** Salim Ramadhan
+**Maintained by:** Salim Ramadhan
