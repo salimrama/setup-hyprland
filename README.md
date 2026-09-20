@@ -17,5 +17,37 @@ Script ini akan secara otomatis melakukan langkah-langkah berikut:
 **Peringatan:** Pastikan kamu menjalankan script ini di Arch Linux atau turunannya yang baru diinstal, atau pada sistem yang belum memiliki konfigurasi Hyprland/SDDM kustom yang tumpang tindih.
 
 1. Buka terminal dan *clone* repositori ini:
-   ```bash
-   git clone https://github.com/salimrama/setup-hyprland-dengan-illogical-impluse-dan-end-4-pc.git
+```bash
+git clone https://github.com/salimrama/setup-hyprland-dengan-illogical-impluse-dan-end-4-pc.git
+cd setup-hyprland-dengan-illogical-impluse-dan-end-4-pc
+```
+
+2. Berikan izin eksekusi pada script:
+```bash
+chmod +x setup-hyprland.sh
+```
+
+3. Jalankan script (script akan otomatis meminta akses sudo jika diperlukan):
+```bash
+./setup-hyprland.sh
+```
+
+4. Setelah instalasi selesai, *reboot* (mulai ulang) sistem kamu:
+```bash
+reboot
+```
+
+## 📝 Catatan Penting
+
+- Proses instalasi (khususnya *setup* dari Illogical Impulse) mungkin akan memakan waktu tergantung pada kecepatan internet, karena script akan mengunduh banyak paket tambahan dari AUR.
+- Jangan menjalankan script ini langsung menggunakan perintah `sudo ./setup-hyprland.sh`. Jalankan sebagai *user* biasa, sistem akan memintamu memasukkan *password root* saat mengeksekusi instalasi paket.
+
+## ✨ Kredit & Apresiasi
+
+Script ini menggunakan karya luar biasa dari komunitas *open-source*. Terima kasih kepada para pembuatnya:
+* **[Darkkal44](https://github.com/Darkkal44/qylock)** untuk tema SDDM `qylock`.
+* **[end-4](https://github.com/end-4/dots-hyprland)** untuk dotfiles Hyprland *Illogical Impulse* yang sangat cantik.
+* **[pctrade](https://github.com/pctrade/end4-pC)** untuk konfigurasi Quickshell tambahan.
+
+---
+**Dikelola oleh:** Salim Ramadhan
